@@ -12,9 +12,9 @@ While powerful, these models can be inefficient and struggle with tasks requirin
 Kensho explores an alternative path focused on architectural elegance and computational efficiency.  
 
 This approach, Hierarchical Recursive Refinement (HRR), is a synthesis of two groundbreaking ideas:  
-1.  **The Hierarchical Reasoning Model (HRM):** A brain-inspired architecture that uses two modules: a high-level "planner" and a low-level "executor": to solve problems hierarchically. This structure is incredibly data-efficient and excels at tasks requiring symbolic reasoning. [1, 2]
+1.  **The Hierarchical Reasoning Model (HRM):** A brain-inspired architecture that uses two modules: a high-level "planner" and a low-level "executor": to solve problems hierarchically. This structure is incredibly data-efficient and excels at tasks requiring symbolic reasoning. (See citation below.)
 
-2.  **The Tiny Recursive Model (TRM):** A minimalist architecture that introduced a breakthrough in training. Instead of making assumptions about the model's internal state, TRM uses full backpropagation through its recursive steps. This allows a much smaller model to achieve superior generalization by learning to iteratively refine its own answers. [3]
+2.  **The Tiny Recursive Model (TRM):** A minimalist architecture that introduced a breakthrough in training. Instead of making assumptions about the model's internal state, TRM uses full backpropagation through its recursive steps. This allows a much smaller model to achieve superior generalization by learning to iteratively refine its own answers. (See citation below.)
 
 **Kensho implements HRR by combining these strengths:** It uses the strategic planner/executor structure of HRM but replaces the core execution mechanism with the more powerful and theoretically robust iterative refinement loop from TRM. The result is a model designed to "think" with both strategic depth and iterative precision.
 
@@ -22,11 +22,11 @@ This approach, Hierarchical Recursive Refinement (HRR), is a synthesis of two gr
 The HRR architecture is directly inspired by the following research. A full understanding of these papers is highly recommended for contributors.
   * **Hierarchical Reasoning Model (HRM):**
       * *A Neuroscience-Inspired, Parameter-Efficient Artificial Intelligence Architecture for Enhanced Reasoning Performance on Complex Benchmarks with Minimal Training Data.*
-      * [https://arxiv.org/abs/2506.21734](https://arxiv.org/abs/2506.21734) [4]
+      * [https://arxiv.org/abs/2506.21734](https://arxiv.org/abs/2506.21734)
 
   * **Tiny Recursive Model (TRM):**
       * *Less is More: Recursive Reasoning with Tiny Networks* by Alexia Jolicoeur-Martineau.
-      * [https://arxiv.org/abs/2510.04871](https://www.google.com/search?q=https://arxiv.org/abs/2510.04871) [5, 6]
+      * [https://arxiv.org/abs/2510.04871](https://www.google.com/search?q=https://arxiv.org/abs/2510.04871)
 
 ## Project Status
 This project is in the initial research and development phase. The immediate goal is to build a working prototype that can validate the HRR architecture on established reasoning benchmarks.
