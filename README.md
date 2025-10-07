@@ -39,17 +39,17 @@ Contributions are welcome. Let's make it happen.
 Please open an issue to discuss your plans before submitting your first pull request.
 
 ### TODO List
-- [] Create repo structure
-- [] Configure prototype Python env, e.g. `pyproject.toml`
-- [] Declare core dependencies
-- [] Write kernel tests in `tests/test_kernels.py`
-- [] Implement `kernels/refiner_kernel.py` with Triton
-- [] Implement `kernels/planner_kernel.py`
-- [] Create PyTorch model in `/pykensho`
-- [] Create `RefinerModule(nn.Module)` in `model.py` to use `forward` to call the kernel
-- [] Create `PlannerModule(nn.Module)` along the same lines
-- [] Create `HRRModel(nn.Module)`, one planner step followed by _N_ refiner steps, all within the `forward` pass to enable backprop
-- [] Create training rig at `pykensho/data.py`, initially using the sapientinc/HRM Sudoku training set
-- [] Create something like `scripts/train.py`, standard PyTorch training loop. Instantiate the HRRModel, the optimizer, and the data loader, and then iterate through epochs
-- [] Train the model on a small dataset to ensure the pipeline works and the loss decreases
-- [] Goal: Replicate the performance claims of TRM on a benchmark
+- [ ] Create repo structure
+- [ ] Configure prototype Python env, e.g. `pyproject.toml`
+- [ ] Declare core dependencies
+- [ ] Write kernel tests in `tests/test_kernels.py`
+- [ ] Implement `kernels/refiner_kernel.py` with Triton
+- [ ] Implement `kernels/planner_kernel.py`
+- [ ] Create PyTorch model in `/pykensho`
+- [ ] Create `RefinerModule(nn.Module)` in `model.py` to use `forward` to call the kernel
+- [ ] Create `PlannerModule(nn.Module)` along the same lines
+- [ ] Create `HRRModel(nn.Module)`, one planner step followed by _N_ refiner steps, all within the `forward` pass to enable backprop
+- [ ] Create training rig at `pykensho/data.py`, initially using the sapientinc/HRM Sudoku training set
+- [ ] Create something like `scripts/train.py`, standard PyTorch training loop. Instantiate the HRRModel, the optimizer, and the data loader, and then iterate through epochs
+- [ ] Train the model on a small dataset to ensure the pipeline works and the loss decreases
+- [ ] Goal: Replicate the performance claims of TRM on a benchmark
