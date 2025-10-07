@@ -12,7 +12,7 @@ While powerful, these models can be inefficient and struggle with tasks requirin
 Kensho explores an alternative path focused on architectural elegance and computational efficiency.  
 
 This approach, Hierarchical Recursive Refinement (HRR), is a synthesis of two groundbreaking ideas:  
-1.  **The Hierarchical Reasoning Model (HRM):** A brain-inspired architecture that uses two modules—a high-level "planner" and a low-level "executor": to solve problems hierarchically. This structure is incredibly data-efficient and excels at tasks requiring symbolic reasoning. [1, 2]
+1.  **The Hierarchical Reasoning Model (HRM):** A brain-inspired architecture that uses two modules: a high-level "planner" and a low-level "executor": to solve problems hierarchically. This structure is incredibly data-efficient and excels at tasks requiring symbolic reasoning. [1, 2]
 
 2.  **The Tiny Recursive Model (TRM):** A minimalist architecture that introduced a breakthrough in training. Instead of making assumptions about the model's internal state, TRM uses full backpropagation through its recursive steps. This allows a much smaller model to achieve superior generalization by learning to iteratively refine its own answers. [3]
 
