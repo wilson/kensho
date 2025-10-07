@@ -1,10 +1,10 @@
 ## Kenshō
-**見性 (Kenshō)** _(n)_: An initial flash of insight, followed by training that deepens into enlightenment.
+**見性 (Kenshō)** _(n)_: An initial flash of insight, followed by training that deepens into enlightenment.  
 
-A prototype implementation of the Hierarchical Recursive Refinement model, initially using Python and Triton.
+A prototype implementation of the Hierarchical Recursive Refinement model, initially using Python and Triton.  
 This is a novel AI model designed for efficient, deep reasoning.  
-The project combines high-performance kernels for GPU execution with PyTorch for data pipelines and orchestration.
-After the concept is proven, the intent is to port from PyTorch to Rust (perhaps with PyO3 and tch-rs).
+The project combines high-performance kernels for GPU execution with PyTorch for data pipelines and orchestration.  
+After the concept is proven, the intent is to port from PyTorch to Rust (perhaps with PyO3 and tch-rs).  
 
 ## Concept
 Modern AI has been dominated by scaling up large, general-purpose models. While powerful, these models can be inefficient and struggle with tasks requiring deep, structured reasoning.  
