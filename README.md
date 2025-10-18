@@ -14,6 +14,12 @@ Project Kensho explores an alternative path. The next frontier of AI lies not in
 
 This is the core of the **Hierarchical Morphic Refinement (HMR)** architecture: a system that learns not just to transform data, but to do so in a way that respects and leverages the underlying geometry and relational structure of the problem itself.
 
+Realizing structured reasoning requires not only the right mathematical language but also the right computational paradigm.  
+Complex reasoning inherently involves integrating incomplete information that arrives asynchronously.  
+Kenshō embraces a decentralized, dataflow-centric approach, grounded in the principles of the **Propagator Model**, where computation is driven by the accumulation and refinement of information and constraints across the network structure.  
+
+If Category Theory provides the "What", the Propagator Model provides the "How".  
+
 ## The HMR Architecture: A Categorical Approach to Cognition
 
 The HMR architecture is a principled synthesis of several powerful ideas:
@@ -21,6 +27,7 @@ The HMR architecture is a principled synthesis of several powerful ideas:
 1.  **A Hierarchical Framework:** Inspired by the Hierarchical Reasoning Model (HRM), the system uses a dual-module design: a high-level **Planner** morphism sets abstract goals, while a low-level **Refiner** morphism executes detailed, iterative computations.
 2.  **Iterative Refinement:** Based on the breakthrough of the Tiny Recursive Model (TRM), the model learns a refinement operator that is applied repeatedly. This process is trained with full backpropagation, enabling superior generalization without making restrictive assumptions about the model's dynamics.
 3.  **Geometric and Topological Awareness:** This is Kensho's core innovation. The Refiner is not a simple neural network block; it is a learned morphism that operates on structured spaces. This allows the model to reason about not just vectors, but the relationships, connections, and global shape of the problem domain.
+4.  **The Propagator Model**: The interaction between the Planner and Refiner, and the internal dynamics of the Refiner itself, are governed by the Propagator Model. The HMR architecture functions as a decentralized network where information is accumulated and refined asynchronously. The Planner asserts constraints (partial information about the goal), triggering the Refiner (conceptualized as a network of autonomous agents) to execute a cascade of inferences (propagations) that satisfy those constraints until the system reaches a consensus (quiescence).  
 
 ## Architectural Roadmap
 
@@ -32,14 +39,18 @@ The initial implementation establishes the core HMR framework. The Refiner modul
 
 ### Version 1.5: Geometric Refinement — Sheaf Neural Networks
 
-This version upgrades the Refiner to a **Sheaf Neural Network (SNN)**. This transforms Kensho from a sequence processor into a true graph-native reasoning engine. The iterative refinement process becomes a form of **Neural Sheaf Diffusion**, a principled method for propagating information across a graph that respects its underlying geometric structure. This allows the model to:
+This version upgrades the Refiner to a **Sheaf Neural Network (SNN)**. This transforms Kensho from a sequence processor into a true graph-native reasoning engine. The iterative refinement process becomes a form of **Neural Sheaf Diffusion**, a principled method for propagating information across a graph that respects its underlying geometric structure.  
+This diffusion process is naturally implemented via the Propagator Model, allowing the messages being passed to be complex constraints or probability distributions, rather than just feature vectors, which are then asynchronously propagated across the graph topology.  
+
+This allows the model to:
 *   Handle heterophilic data (where connected nodes are dissimilar).
 *   Avoid common GNN problems like over-smoothing.
 *   Learn complex, context-dependent relationships between entities in the problem space.
 
 ### Version 2.0: Higher-Order Dynamics — Simplicial Message Passing
 
-The final stage of the vision extends the Refiner to operate on **simplicial complexes**. While graphs model pairwise relationships, simplicial complexes can represent higher-order interactions (triangles, tetrahedra, etc.). By using **Simplicial Message Passing**, Kensho will be able to reason about systems with complex, multi-way constraints, such as those found in molecular dynamics, social systems, and advanced logic.
+The final stage of the vision extends the Refiner to operate on **simplicial complexes**. While graphs model pairwise relationships, simplicial complexes can represent higher-order interactions (triangles, tetrahedra, etc.). By using **Simplicial Message Passing**, Kensho will be able to reason about systems with complex, multi-way constraints, such as those found in molecular dynamics, social systems, and advanced logic. 
+The Propagator architecture excels at managing these multidirectional constraints, providing a computational framework for efficiently solving these high-dimensional satisfaction problems.  
 
 ## A Principled Approach to Training and Analysis
 
@@ -61,12 +72,16 @@ This ambitious research agenda is made computationally feasible by a modern, per
 The HMR architecture stands on the shoulders of giants. A full understanding of these papers is highly recommended for contributors.
 
 *   **Hierarchical Reasoning Model (HRM):**
-    *   *A Neuroscience-Inspired, Parameter-Efficient Artificial Intelligence Architecture for Enhanced Reasoning Performance on Complex Benchmarks with Minimal Training Data.*
+    *   *A Neuroscience-Inspired, Parameter-Efficient Artificial Intelligence Architecture for Enhanced Reasoning Performance on Complex Benchmarks with Minimal Training Data*
     *   [https://arxiv.org/abs/2506.21734](https://arxiv.org/abs/2506.21734)
 
 *   **Tiny Recursive Model (TRM):**
-    *   *Less is More: Recursive Reasoning with Tiny Networks* by Alexia Jolicoeur-Martineau.
-    *   [https://arxiv.org/abs/2510.04871](https://www.google.com/search?q=https://arxiv.org/abs/2510.04871)
+    *   *Less is More: Recursive Reasoning with Tiny Networks* by Alexia Jolicoeur-Martineau
+    *   [https://arxiv.org/abs/2510.04871](https://arxiv.org/abs/2510.04871)
+
+*   **The Propagator Model:**
+    *  *The Art of the Propagator* by Alexey Radul and Gerald Jay Sussman
+    *  [https://dspace.mit.edu/handle/1721.1/44215](https://dspace.mit.edu/handle/1721.1/44215)
 
 ## Project Status
 
