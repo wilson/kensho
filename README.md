@@ -10,7 +10,7 @@ This project synthesizes breakthroughs in recursive reasoning with cutting-edge 
 
 Modern AI has been defined by scaling large, monolithic models. While powerful, this paradigm is computationally expensive and struggles with tasks requiring deep, structured reasoning or principled uncertainty management.
 
-PKenshō explores an alternative path. We believe the next frontier of AI lies not in greater scale, but in superior architectural principles grounded in how both natural and artificial systems efficiently process information. This approach is built on three pillars:
+Kenshō explores an alternative path. We believe the next frontier of AI lies not in greater scale, but in superior architectural principles grounded in how both natural and artificial systems efficiently process information. This approach is built on three pillars:
 
 1.  **Cognitive Plausibility (The "Why"):** Inspiration is drawn from cognitive science models of human reasoning, which suggest that people approach novel problems using fast, shallow, goal-directed mental simulations, not exhaustive search.[1] The **Planner** module embodies this principle of resource-rationality.
 2.  **Probabilistic Propagation (The "How"):** Computation is modeled as a probabilistic process of information propagation. Our **Refiner** module is based on the **Propagator Model**, a class of generative models (like Schrödinger Bridges) that learn to efficiently transform an incomplete or low-resolution state into a refined, high-resolution state through a learned diffusion process.[1]
