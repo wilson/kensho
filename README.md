@@ -94,7 +94,8 @@ While the initial prototype will operate on "classical" GPU platforms, the overa
 ## Status
 
 **Current Phase:** Architectural definition and tooling.
-**Goal:** Validating the **Version 1.0** HMR architecture on established reasoning benchmarks using existing computing hardware.
+
+**Goal:** Validating the "Version 1.0" HMR architecture on established reasoning benchmarks using existing computing hardware.
 
 ## Contributing
 
