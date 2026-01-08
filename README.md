@@ -101,6 +101,8 @@ While the initial prototype will operate on "classical" GPU platforms, the overa
 
 Contributions are welcome. Please open an issue to discuss potential changes or new features before submitting a pull request.
 
+Consider a thorough review of the referenced literature a necessary prerequisite to understanding this project.
+
 ## Foundational Inspiration
 
 This concept loots the treasure vaults of giants, synthesizing research from multiple disciplines.
