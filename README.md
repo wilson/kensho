@@ -1,86 +1,133 @@
-## Kenshō  
-**見性 (Kenshō)** _(n)_: An initial flash of insight, followed by training that deepens into enlightenment.  
+## Kenshō
+**見性 (Kenshō)** *(n)*: An initial flash of insight, followed by training that deepens into enlightenment.
 
-Prototype implementation of the **Hierarchical Morphic Refinement (HMR)** architecture, a novel framework for building intelligent agents.  
-Kenshō is designed to explore a new paradigm of computation that is efficient, structured, and deeply probabilistic.  
+Prototype implementation of the **Hierarchical Morphic Refinement (HMR)** architecture, a full-stack framework for building intelligent agents.
 
-This work synthesizes breakthroughs in recursive reasoning with cutting-edge models from computational neuroscience, generative AI, and geometric deep learning.  
+Kenshō synthesizes cognitive science, formal verification theory, and condensed matter physics to try to solve the problem of "Automated Right Action."
 
-## The Vision: A New Foundation
+The goal is not to simulate human thought, but to physically instantiate the geometry of reasoning.
 
-Modern "AI" has been defined by scaling large, monolithic models. While powerful, this paradigm is power-intensive and struggles with tasks requiring deep, structured reasoning or principled uncertainty management.  
+---
 
-Kenshō explores an alternative path. The next frontier lies not in greater scale, but in superior architectural principles grounded in how both natural and artificial systems efficiently process information.  
+## The Architecture: The Eightfold Model
 
-This approach is built on three pillars:  
-1.  **Cognitive Plausibility (The "Why"):** Inspiration comes from cognitive science models of human reasoning, which suggest that people approach novel problems using fast, shallow, goal-directed mental simulations, not exhaustive search. The **Planner** module embodies this principle of resource-rationality.
-2.  **Probabilistic Propagation (The "How"):** Computation is modeled as a probabilistic process of information propagation. The **Refiner** module is based on the **Propagator Model**, a class of generative models (like Schrödinger Bridges) that learn to efficiently transform an incomplete or low-resolution state into a refined, high-resolution state through a learned diffusion process.
-3.  **Hardware Realization (The "Where"):** This probabilistic, energy-based approach aligns directly with emerging neuromorphic hardware, such as spintronic (or perhaps valleytronic) devices that can perform in-hardware sampling, promising radical gains in energy efficiency over traditional silicon.
+Current AI architectures conflate "formal competence" (grammar, pattern matching) with "functional competence" (reasoning, planning). In the language of the **Coordination Trilemma**, they prioritize Availability over Consistency, which leads to hallucination.
 
-## The HMR Architecture: Propagator-Based Agent
+Kenshō decouples these functions into an 8-layer geometric architecture designed to operate as a **Consistency-First (CP)** system:
+* Layers "1-7" represent the preconfigured functional networks observed in biological intelligence.
+* Layer "8" provides the constructive "bias" that drives the system toward convergence.
 
-The HMR architecture is initially a two-level system designed to explicitly model the interaction between goal-directed planning and mechanistic, probabilistic refinement.
+### I. The Ethical Foundation (The Lamplighter)
 
-1.  **The Planner (Active Inference):** The high-level Planner acts as a probabilistic world model, guided by the Free Energy Principle (FEP). It performs **active inference** to handle uncertainty, seek information, and select policies (sequences of sub-goals) that are expected to minimize future surprise. It embodies the "fast and flat" reasoning of a resource-rational agent.
+* **Layer 8: The Lamplighter.** The meta-meta-strategist. It defines the global energy function (the "Anti-Nihilism Bias"). It does not "think" in tokens; it monitors the system's convergence rate. If the system drifts into high variance/instability (the "Marginal Region"), the Lamplighter triggers a context reset. It provides the "will to converge" that distinguishes a conscious agent from a random process.
 
-2.  **The Refiner (Probabilistic Propagator):** The low-level Refiner is the mechanistic substrate that executes the Planner's policies. This is implemented as a **probabilistic propagator** using the state-of-the-art framework of **Discrete Schrödinger Bridges (SB)**. This approach formally recasts the refinement process as an **Entropic Optimal Transport (EOT)** problem: finding the most efficient probabilistic path to transform the current solution distribution into the target distribution proposed by the Planner. This aligns perfectly with the FEP's objective of minimizing surprise. The iterative refinement loop becomes a series of learned diffusion steps, efficiently guiding the solution state toward a stable, low-energy attractor. The recent introduction of efficient solvers like **DLightSB** provides a validated, concrete implementation path for this core module.
+### II. The Planner (Functional Competence)
 
-## Architectural Roadmap
+* **Layer 7: Default Mode Layer (Simulation).** The internal world model. Runs "fast, flat" rollouts of potential state trajectories before they are committed to memory.
+* **Layer 6: Frontoparietal Layer (Control).** The executive planner. Uses **Tree-of-Thoughts** reasoning to select the next target state.
+* **Layer 5: Limbic Layer (Valence).** The local energy estimator. Assigns cost/value to transitions in the state graph.
 
-Kenshō is a multi-phase research program to progressively increase the sophistication of the Refiner's computational substrate. The Schrödinger Bridge framework is general enough to serve as the implementation for each stage.
+### III. The Refiner (Formal Competence)
 
-*   **Version 1.0: Algorithmic Refinement:** The initial implementation establishes the core HMR framework with a Transformer-based Refiner, validating the baseline iterative refinement process.
-*   **Version 1.5: Geometric Refinement - Sheaf Neural Networks:** The Refiner is upgraded to a **Sheaf Neural Network (SNN)**, transforming Kenshō into a graph-native reasoning engine. The refinement process becomes a form of **Neural Sheaf Diffusion**, allowing the model to reason over complex relational data.
-*   **Version 2.0: Higher-Order Dynamics - Simplicial Message Passing:** The Refiner is extended to operate on **simplicial complexes**, enabling Kenshō to reason about systems with complex, multi-way constraints.
+* **Layer 4: Ventral Attention Layer (Interrupt).** The runtime monitor. Detects when a hypothesis is diverging from the theoretical convergence bound.
+* **Layer 3: Dorsal Attention Layer (Focus).** The spotlight of the **Delta Operator**. Selects which features to project (erase) and which to inject (write).
+* **Layer 2: Visual/Spatial Layer (Geometry).** The memory substrate. Uses **Node-Sequence/Graph Memory** rather than linear context windows to store structural relationships (roads, intersections, logic gates).
+* **Layer 1: Somatomotor Layer (Action).** The interface to the physical world or the output buffer. Handles embodied constraints and final execution.
 
-## Principled Training and Analysis
+The lowest layer relates, perhaps, to "lizard brain" behaviors.
 
-The Kenshō framework integrates modern techniques to guide the learning process and, crucially, to understand the resulting models.
+---
 
-*   **Training the Model: Topological Regularization:** Loss functions are derived from Topological Data Analysis (TDA). By adding terms that penalize or encourage specific topological features (e.g., the number of loops or connected components) in the model's output, we can directly teach the model to produce solutions with the correct global structure.
-*   **Analyzing the Model: Microscope for Emergent Cognition:** To understand *how* Kenshō learns to process information, advanced analysis techniques are used: they are **explicitly separate from the model's architecture and training loop**. These are post-hoc interpretability tools, not components of the model itself. By treating the iterative refinement process as a discrete dynamical system, we can use methods from TDA, such as persistent homology, to map the trajectories of the model's internal states. This serves as a "microscope" to visualize the "shape" of the learned dynamics, identify stable attractors, and diagnose the model's reasoning process, providing unprecedented insight into its emergent cognitive strategies.
+## The Mechanisms
 
-## High-Performance Implementation
+### Deep Delta Learning (The Operator)
 
-This agenda is made feasible by a modern tech stack:
+Standard residual networks use additive updates ($x + F(x)$), which can only accumulate information (and noise). Kenshō uses the **Delta Operator** to explicitly manipulate the state graph:
+```math
+X_{new} = X_{old} + \beta k (v^T - k^T X_{old})
+```
 
-*   **Performance on the GPU:** Custom compute kernels for the core morphic refiners are written in **Triton**, a Python-based language that compiles to highly efficient GPU code.
-*   **Safety and Speed on the CPU:** Data loading pipelines and the main training loop are driven by **Rust**, providing memory safety and C-like performance for data orchestration.
-*   **Seamless Integration:** The system is built on **PyTorch**, with **PyO3** and **Maturin** creating a single, easy-to-install Python package that bridges the Python ML ecosystem and the high-performance Rust core.
+* **Projection ($k^T X_{old}$):** Deliberate forgetting. The Refiner erases features that violate the current hypothesis.
+* **Injection ($v^T$):** Writing the new state.
+* **Reflection ($\beta \approx 2$):** Flipping the hypothesis.
+This allows the system to edit its "mind" rather than just appending to a stream of tokens.
 
-## Foundational Inspiration
+### The Convergence Guarantee (The Dantas Bound)
 
-If this architecture stands at all, it is upon the shoulders of giants.  
+Kenshō is modeled as a **Sequential Absorbing Markov Chain**. It resolves the **Coordination Trilemma** by accepting the latency cost of reasoning to ensure state consistency. It does not rely on heuristics to know if the model will finish thinking.
 
-  * **Hierarchical & Recursive Reasoning (HRM):**
-      * *A Neuroscience-Inspired, Parameter-Efficient Artificial Intelligence Architecture for Enhanced Reasoning Performance on Complex Benchmarks with Minimal Training Data.*
-      * [https://arxiv.org/abs/2506.21734](https://arxiv.org/abs/2506.21734)
+Rather, the theoretical bound:
+```math
+\mathbb{E}[n] \le 4/\delta
+```
 
-  * **Hierarchical & Recursive Reasoning (TRM):**
-      * *Less is More: Recursive Reasoning with Tiny Networks* by Alexia Jolicoeur-Martineau.
-      * [https://arxiv.org/abs/2510.04871](https://arxiv.org/abs/2510.04871)
+Where "delta" is the error-reduction probability. If $\delta > 0$ (the system is at least partially competent), the agent is mathematically guaranteed to reach a "Verified" state.
 
-  * **Probabilistic Propagation (Discrete Schrödinger Bridges):**
-      * *Entering the Era of Discrete Diffusion Models: A Benchmark for Schrödinger Bridges and Entropic Optimal Transport.*
-      * [https://arxiv.org/abs/2509.23348](https://arxiv.org/abs/2509.23348)
+### The Physical Substrate (Dirac Dataflow)
 
-  * **Cognitive Plausibility (Fast, Flat Simulation):**
-      * *People use fast, flat goal-directed simulation to reason about novel problems.*
-      * [https://arxiv.org/abs/2510.11503](https://arxiv.org/abs/2510.11503)
+While the initial prototype will operate on "classical" GPU platforms, the overall architecture is designed to run one day on the **Dirac Dataflow Architecture**, a theoretical hardware specification based on **Magic-Angle Twisted Bilayer Graphene (MATBLG)** or similar substrates.
 
-  * **Hardware Realization (Spintronics):**
-      * *Field Free Spin-Orbit Torque Controlled Synapse and Stochastic Neuron Devices for Spintronic Boltzmann Neural Networks.*
-      * [https://arxiv.org/abs/2510.05616](https://arxiv.org/abs/2510.05616)
+* **Write Mechanism:** The **Inverse Faraday Effect** allows memory states to be written instantaneously using circularly polarized light, eliminating the heat dissipation of electric currents.
+* **Logic:** **Valleytronics**. Computation occurs by switching electron orbits (valleys), providing a non-volatile, topological memory substrate.
 
-  * **Probabilistic Propagation (Continuous Schrödinger Bridges):**
-      * *Probabilistic Super-Resolution for Urban Micrometeorology via a Schrödinger Bridge.*
-      * [https://arxiv.org/abs/2510.12148](https://arxiv.org/abs/2510.12148)
+---
+
+## The Stack
+
+* **Theory:** Cognitive Science (Mahowald), Verification (Dantas), Geometric DL (Zhang), Neurodevelopment (van der Molen).
+* **Model:** [kenshō](https://github.com/wilson/kensho). Implements the "Eightfold" architecture and Delta Learning.
+* **Utilities:** [ariadne](https://github.com/wilson/ariadne) & [friction](https://github.com/wilson/friction) (Zig). Low-level libraries for memory-safe graph traversal and topological data analysis.
+* **Compiler (Future Bridge):** [xotiq](https://github.com/wilson/xotiq). A hardware description language that separates probabilistic fabric (`p_node`) from deterministic control (`d_node`). Targets SPICE netlists for analog verification.
+
+---
+
+## Glossary of Terms
+
+* **Coordination Trilemma:** Known as the CAP Theorem in distributed systems. Biology got there first, however. It dictates that a system cannot maximize Consistency, Availability, and Partition Tolerance simultaneously. Kenshō chooses **Consistency and Partition Tolerance** (CP). By contrast, LLMs are **Available and Partition-Tolerant** (AP) at the cost of consistency, while most biological intelligence maximizes **Consistency and Availability** (CA) at the cost of learning from contradiction.
+* **Absorbing State:** A state in a Markov chain that, once entered, cannot be left. In Kenshō, this is the "Verified" or "Done" state.
+* **Delta Operator:** A geometric transformation that generalizes residual connections. It allows a network to interpolate between Identity (doing nothing), Projection (erasing data), and Reflection (flipping data).
+* **Inverse Faraday Effect:** A physical phenomenon where a static magnetic field is induced by a circularly polarized electromagnetic wave (light). Used here as a non-thermal write mechanism.
+* **Marginal Region:** The operational zone where the probability of a successful step ($\delta$) is less than 0.3. In this region, the variance of convergence time explodes, leading to instability.
+* **Node-Sequence Memory:** A memory structure that stores a chronological sequence of visited states and their local topology, proven to outperform linear context windows for spatial and structural reasoning.
+* **Valleytronics:** A field of electronics that uses the "valley" degree of freedom (electron momentum states in a crystal lattice) to encode information, rather than electric charge.
 
 ## Status
 
-This work is in the initial research and development phase.  
-The immediate goal is to build and validate the **Version 1.0** HMR architecture on established reasoning benchmarks.  
+**Current Phase:** Architectural definition and tooling.
+**Goal:** Validating the **Version 1.0** HMR architecture on established reasoning benchmarks using existing computing hardware.
 
 ## Contributing
 
 Contributions are welcome. Please open an issue to discuss potential changes or new features before submitting a pull request.
+
+## Foundational Inspiration
+
+This concept loots the treasure vaults of giants, synthesizing research from multiple disciplines.
+
+### Cognitive Architecture (The "Why")
+
+* **Dissociating Language and Thought:** *Dissociating Language and Thought in Large Language Models* (Mahowald et al., 2024). The core justification for separating the **Planner** (Functional Competence) from the **Refiner** (Formal Competence).
+    * [arxiv.org/abs/2301.06627](https://arxiv.org/abs/2301.06627)
+* **Fast, Flat Simulation:** *People use fast, flat goal-directed simulation to reason about novel problems* (Collins et al., 2025). The model for **Layer 7 (Default Mode)**.
+    * [arxiv.org/abs/2510.11503](https://arxiv.org/abs/2510.11503)
+* **Spatial Reasoning & Memory:** *Thinking on Maps: How Foundation Model Agents Explore...* (Wei et al., 2025). The empirical proof that **Graph Memory** outperforms linear context for spatial reasoning.
+    * [arxiv.org/abs/2512.24504](https://arxiv.org/abs/2512.24504)
+
+### Verification & Mechanisms (The "How")
+
+* **The Convergence Bound:** *The 4/δ Bound: Designing Predictable LLM-Verifier Systems* (Dantas et al., 2025). The mathematical guarantee for the **Lamplighter's** stopping condition.
+    * [arxiv.org/abs/2512.02080](https://arxiv.org/abs/2512.02080)
+* **Deep Delta Learning:** *Deep Delta Learning* (Zhang et al., 2026). The geometric basis for the **Refiner's** update rule (Projection/Reflection).
+    * [arxiv.org/abs/2601.00417](https://arxiv.org/abs/2601.00417)
+* **Preconfigured Topology:** *Preconfigured Neuronal Firing in the Human Brain* (van der Molen et al., 2025). Evidence that intelligence requires a pre-wired topological **backbone**, not just a blank slate.
+    * [nature.com/articles/s41593-025-02111-0](https://www.nature.com/articles/s41593-025-02111-0)
+
+### Physical Realization (The "Where")
+
+* **Orbital Magnetism:** *Optical control of orbital magnetism in magic-angle twisted bilayer graphene* (2026). The physical mechanism for writing memory with light (Inverse Faraday Effect).
+    * [nature.com/articles/s41567-025-03117-y](https://www.nature.com/articles/s41567-025-03117-y)
+* **Spintronics:** *Field Free Spin-Orbit Torque Controlled Synapse...* (Lone et al., 2025). The feasibility of **stochastic hardware** for the probabilistic fabric.
+    * [arxiv.org/abs/2510.05616](https://arxiv.org/abs/2510.05616)
+
+---
+*© 02026 Wilson Bilkovich*
