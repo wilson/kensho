@@ -1,6 +1,8 @@
 * text=auto eol=lf
 README.md linguist-documentation
 README.md linguist-language=Markdown
+PROJECT.md linguist-documentation
+PROJECT.md linguist-language=Markdown
 LICENSE linguist-documentation
 LICENSE linguist-language=Text
 *.zig linguist-language=Zig
