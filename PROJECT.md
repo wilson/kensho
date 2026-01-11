@@ -2,7 +2,7 @@
 
 Projects are numerous. This is an architecture.
 
-Kenshō is an attempt to solve the **Coordination Trilemma** (CAP Theorem) by rejecting the "Open World Assumption" of classical AI and the "Scale-Separability" of classical computing.
+Kenshō is an attempt to implement the biological **Coordination Trilemma** (CAP Theorem) of consciousness by rejecting the "Open World Assumption" of classical AI and the "Scale-Separability" of classical computing.
 
 Kenshō aims to produce **Sovereign Agents**, individual, non-fungible entities with defined boundaries, finite resources, self-aware of their own metabolic costs.
 
