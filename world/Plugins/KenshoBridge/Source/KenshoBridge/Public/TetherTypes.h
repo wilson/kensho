@@ -48,3 +48,7 @@ struct FTetherHeader
     uint64 Tai64Sec = 0;
 };
 #pragma pack(pop)
+
+static_assert(sizeof(FTetherHeader) == 64, "Tether Header must be exactly 64 bytes.");
+static_assert(offsetof(FTetherHeader, Tai64Nano) == 20, "Tai64Nano must fill the alignment gap at offset 20.");
+static_assert(offsetof(FTetherHeader, TokenID) == 24, "TokenID must start at offset 24 (8-byte boundary).");
