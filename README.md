@@ -118,6 +118,9 @@ This concept loots the treasure vaults of giants, synthesizing research from mul
 
 ### Verification & Mechanisms (The "How")
 
+
+* **Category Theory on nVidia:** *Categorical Foundations for CuTe Layouts* (Carlisle, Shah, Stern, VanKoughnett, 2026). Practical implementation on nVidia CUTLASS.
+    * [arxiv.org/abs/2601.05972](https://arxiv.org/abs/2601.05972)
 * **The Convergence Bound:** *The 4/δ Bound: Designing Predictable LLM-Verifier Systems* (Dantas et al., 2025). The mathematical guarantee for the **Lamplighter's** stopping condition.
     * [arxiv.org/abs/2512.02080](https://arxiv.org/abs/2512.02080)
 * **Deep Delta Learning:** *Deep Delta Learning* (Zhang et al., 2026). The geometric basis for the **Refiner's** update rule (Projection/Reflection).

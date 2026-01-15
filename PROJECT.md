@@ -17,6 +17,14 @@ This architecture implements **Biological Computationalism**:
 
 "Scale-Integrated" and "Scale-Free" are distinct concepts, we must be careful not to conflate them.
 
+Kenshō will manage its own memory using the **Category Nest** approach.
+> See [Categorical Foundations for CuTe Layouts](https://arxiv.org/abs/2601.05972) for details.
+
+It does not view memory as a flat array, but as a hierarchical structure of **Tractable Layouts**.
+
+* **Morphisms:** Data movements are treated as morphisms .
+* **Cost:** The "cost" of a thought is determined by the complexity of the morphism required to materialize it (Rank + Depth).
+
 ---
 
 ## Layout
