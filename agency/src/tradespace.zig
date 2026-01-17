@@ -1,7 +1,9 @@
 const std = @import("std");
 const Allocator = std.mem.Allocator;
 const ArrayList = std.ArrayList;
-const Random = std.rand.Random;
+
+pub const PPM = u32;
+pub const PPM_MAX: PPM = 1_000_000;
 
 /// Represents the current "Memory" of explored possibilities.
 pub const Tradespace = struct {
@@ -67,9 +69,9 @@ pub const DesignSpace = struct {
   requiresUniqueSolution: bool = true,
 
   /// Samples a random candidate from this Design Space.
-  pub fn propose(self: DesignSpace, allocator: Allocator, rng: Random) !Candidate {
+  pub fn propose(self: DesignSpace, allocator: Allocator, rng: std.Random) !Candidate {
     // Use 'self' (the constraints) to shape the output.
-    var buffer = try allocator.alloc(u8, self.entropy_limit);
+    const buffer = try allocator.alloc(u8, self.entropy_limit);
     rng.bytes(buffer);
 
     // TODO: Apply other constraints from 'self' here.
@@ -77,7 +79,7 @@ pub const DesignSpace = struct {
     return Candidate{
       .configuration = buffer,
       .allocator = allocator,
-  };
+    };
   }
 };
 
@@ -111,13 +113,16 @@ pub const Solution = struct {
   // The "Energy" Axis (Cost)
   // We want to MINIMIZE these.
   cost_atp: u64,      // Compute cycles
-  cost_latency: u64,  // Wall time
-  risk_factor: f32,   // Probability of failure (0.0 - 1.0)
+  cost_latency: u64,  // Wall time (nanoseconds)
+
+  // Fixed-point risk (0 = Safe, 1_000_000 = Doomed)
+  risk_ppm: PPM,   
 
   // The "Motivation" Axis (Utility)
+  // Integer utility units (Arbitrary Scale)
   // We want to MAXIMIZE these.
-  utility_meaning: f32, // Relevance to core goal
-  utility_novelty: f32, // Information gain
+  utility_meaning: u32, 
+  utility_novelty: u32, 
 
   /// Returns true if 'self' dominates 'other'.
   /// A solution dominates another if it is better (or equal) in ALL dimensions
@@ -133,7 +138,7 @@ pub const Solution = struct {
     // Check non-inferiority in all others
     return (self.cost_atp <= other.cost_atp) and
       (self.cost_latency <= other.cost_latency) and
-      (self.risk_factor <= other.risk_factor) and
+      (self.risk_ppm <= other.risk_ppm) and // Integer compare
       (self.utility_meaning >= other.utility_meaning) and
       (self.utility_novelty >= other.utility_novelty);
   }
