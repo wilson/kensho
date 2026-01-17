@@ -1,0 +1,14 @@
+.{
+  .name = .kensho_agent,
+  .version = "0.0.1",
+  .fingerprint = 0x6617a960b2e24480,
+  .paths = .{
+    "build.zig",
+    "build.zig.zon",
+    "src",
+},
+
+.dependencies = .{
+  // Stand-alone complex.
+    },
+}
