@@ -27,8 +27,8 @@ pub fn build(b: *std.Build) void {
   });
 
   // Only exposed to the spec suite.
-  const solution_module = b.createModule(.{
-    .root_source_file = b.path("src/solution.zig"),
+  const tradespace_module = b.createModule(.{
+    .root_source_file = b.path("src/tradespace.zig"),
   });
 
   // Spec module.
@@ -40,7 +40,7 @@ pub fn build(b: *std.Build) void {
   spec_module.addImport("sys", sys_module);
   // Explicitly grant access to modules.
   spec_module.addImport("agency_layout", layout_module);
-  spec_module.addImport("agency_solution", solution_module);
+  spec_module.addImport("agency_tradespace", tradespace_module);
 
   // Actual artifacts //
 

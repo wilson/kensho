@@ -25,6 +25,8 @@ It does not view memory as a flat array, but as a hierarchical structure of **Tr
 * **Morphisms:** Data movements are treated as morphisms .
 * **Cost:** The "cost" of a thought is determined by the complexity of the morphism required to materialize it (Rank + Depth).
 
+[MATE](https://seari.mit.edu/mate.php) (Multi-Attribute Tradespace Exploration) is used in place of "classification" as a conceptual approach.
+
 ---
 
 ## Layout
@@ -32,22 +34,22 @@ It does not view memory as a flat array, but as a hierarchical structure of **Tr
 The repository is organized into three distinct domains.
 
 ```text
-├── bootstrap.zig          <-- The Sovereign Operator (Entry Point)
-├── LICENSE
+├── kensho.zig             <-- Bootstrap repository, validate environment
+├── LICENSE                <-- Apache 2.0
 │
 ├── ideas/                 <-- "Ontology" (Canonical Data)
-│   ├── mantis/            <-- A "species" definition
-│   │   ├── proto.haga     <-- Genome Logic (Constraints)
-│   │   └── proto.usda     <-- Physical Geometry (Sense organs, limbs, etc)
+│   ├── mantis/            <-- A "species" definition (Design Vector)
+│   │   ├── proto.haga     <-- Configuration/Design Logic (Constraints)
+│   │   └── proto.usda     <-- Physical Attributes (Sense organs, limbs, etc)
 │   └── schemas/           <-- sqlite-sync schemata, cross-species
 │
 ├── agency/                <-- "The Will" (Implementation)
 │   ├── build.zig          <-- Compiles the Brain (linkable library)
-│   ├── src/
-│   │   ├── main.zig       <-- The Salience Filter & "Boredom" Logic
-│   │   └── tether.zig     <-- The Nervous System (Tether protocol binding)
-│   └── include/
-│       └── kensho_abi.h   <-- The "von Neumann compatibility" contract
+│   └── src/
+│       ├── specs/         <-- Executable spec suite.
+│       └── root.zig       <-- Agent entry point.
+│    
+├── support/               <-- Modules used in multiple layers.
 │
 └── world/                 <-- "The Simulation" (Embodiment)
     ├── Engine/            <-- Symlink to UnrealEngine (Managed by bootstrap.zig)
